@@ -1,0 +1,89 @@
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: #000;
+  color: #eee;
+  font-family: 'Press Start 2P', monospace;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  touch-action: manipulation;
+}
+.container {
+  background: #000;
+  border: 2px solid #f00;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 20px #f00;
+  animation: fadeIn 1s ease-in;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+.success-title {
+  font-size: 14px;
+  color: #f00;
+  margin-bottom: 20px;
+}
+.success-text {
+  font-size: 8px;
+  line-height: 1.8;
+  color: #f77;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Splash Screen */
+#splash {
+  position: fixed; top:0; left:0;
+  width:100%; height:100%;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  animation: fadeOut 1s ease-in-out 2.5s forwards;
+}
+.splash-logo {
+  width:200px;
+  max-width:80%;
+  animation: zoomIn 1.5s ease;
+}
+@keyframes zoomIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+/* Branding */
+.branding {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10000;
+}
+.branding img.logo-small {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+.branding .brand-text {
+  color: #f00;
+  font-size: 12px;
+  text-shadow: 1px 1px #900;
+  text-decoration: none;
+}
